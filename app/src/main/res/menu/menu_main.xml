@@ -3,8 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.appeasyshop.MainActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_pedido"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="@string/action_pedido"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_recetas"
+        android:orderInCategory="101"
+        android:title="@string/action_recetas"
         app:showAsAction="never" />
 </menu>
