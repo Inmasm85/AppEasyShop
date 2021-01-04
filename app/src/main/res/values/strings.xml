@@ -7,11 +7,12 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
     <string name="action_pedido">Pedido</string>
     <string name="action_recetas">Recetas</string>
-    <string name="inputWord">Input word</string>
-    <string name="word">word</string>
-    <string name="wordMeaning">word meaning</string>
+    <string name="buscarCategoria">Buscar Categoría</string>
+    <string name="categorias">Categorías</string>
+
+
+
 </resources>

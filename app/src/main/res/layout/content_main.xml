@@ -25,50 +25,59 @@
         app:layout_constraintTop_toTopOf="parent"
         app:navGraph="@navigation/nav_graph" />-->
 
-    <Button
-        android:id="@+id/button"
+    <EditText
+        android:id="@+id/searchCategoria"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="@string/buscarCategoria"
+        android:inputType="text"
+        android:textAlignment="textEnd"
+        android:textSize="14sp" />
 
-        android:layout_marginEnd="21dp"
-
-        android:text="@android:string/search_go"
-
-        />
-
-    <EditText
-        android:id="@+id/editText"
+    <ImageView
+        android:id="@+id/imageLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-
         android:layout_alignParentTop="true"
-        android:ems="10"
-        android:hint="@string/inputWord"
-        android:inputType="text" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
+        android:id="@+id/textCategorias"
+        android:layout_width="155dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/button"
+        android:layout_below="@+id/imageLogo"
         android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="120dp"
+        android:text="@string/categorias"
+        android:textAlignment="center"
+        android:textSize="18sp" />
 
-        android:text="@string/word"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textView"
+    <ListView
+        android:id="@+id/listViewCategorias"
+        android:layout_width="395dp"
+        android:layout_height="410dp"
+        android:layout_below="@+id/textCategorias"
         android:layout_alignParentStart="true"
-
-        android:layout_marginTop="14dp"
-        android:text="@string/wordMeaning"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="8dp" />
 
 
 </RelativeLayout>
