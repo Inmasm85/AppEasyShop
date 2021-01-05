@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_producto"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.appeasyshop.Producto"
+    tools:showIn="@layout/activity_producto">
+
+
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="103dp"
+        android:layout_height="73dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/logotienda" />
+
+    <SearchView
+        android:id="@+id/searchInProductX"
+        android:layout_width="187dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="26dp"
+        android:layout_toEndOf="@+id/imageLogo" />
+
+    <TextView
+        android:id="@+id/textProductoX"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageLogo"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="120dp"
+        android:text="@string/productoX"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="169dp"
+        android:layout_height="81dp"
+        android:layout_below="@+id/textProductoX"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="113dp"
+        android:src="@drawable/cartonleche" />
+
+    <TextView
+        android:id="@+id/tvProductDescrip"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="48dp"
+        android:text="@string/descripcionProducto"
+        android:textAlignment="textStart"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="89dp"
+        android:layout_height="39dp"
+        android:layout_below="@+id/tvProductDescrip"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="127dp"
+        android:layout_marginBottom="110dp"
+        android:text="@string/unidades"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="116dp"
+        android:layout_height="25dp"
+        android:layout_below="@+id/tvProductDescrip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="110dp"
+        android:layout_toEndOf="@+id/textView2"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="128dp"
+        android:layout_height="59dp"
+        android:layout_below="@+id/tvProductDescrip"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="110dp"
+        android:layout_toEndOf="@+id/editTextNumber"
+        android:text="@string/comprar" />
+
+
+</RelativeLayout>

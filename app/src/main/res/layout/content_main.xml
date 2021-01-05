@@ -28,7 +28,7 @@
         android:id="@+id/listViewProductos"
         android:layout_width="395dp"
         android:layout_height="410dp"
-        android:layout_below="@+id/textCategoriaX"
+        android:layout_below="@+id/textProductoX"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -38,7 +38,7 @@
         android:layout_marginBottom="8dp" />
 
     <SearchView
-        android:id="@+id/searchProducto"
+        android:id="@+id/searchInProductX"
         android:layout_width="187dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -48,7 +48,7 @@
         android:layout_toEndOf="@+id/imageLogo" />
 
     <TextView
-        android:id="@+id/textCategoriaX"
+        android:id="@+id/textProductoX"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageLogo"

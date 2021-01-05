@@ -7,16 +7,31 @@
     <string name="next">Next</string>
     <string name="previous">Previous</string>
 
-
+    <!-- Menu items -->
     <string name="action_pedido">Pedido</string>
     <string name="action_recetas">Recetas</string>
+    <string name="action_categorias">Categorías</string>
+
+    <!-- Categorias -->
     <string name="buscarCategoria">Buscar Categoría</string>
     <string name="categorias">Categorías</string>
     <string name="title_activity_categoria">Categoria</string>
     <string name="categoriaX">CategoríaX</string>
 
+    <!-- Producto -->
+    <string name="title_activity_producto">Producto</string>
+    <string name="productoX">Producto X</string>
+    <string name="descripcionProducto">Brick de 1 L de leche desnadata. Procedencia: España</string>
+    <string name="unidades">Unidades</string>
+    <string name="comprar">Comprar</string>
+
+
+
+
+
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
 
 
 </resources>
