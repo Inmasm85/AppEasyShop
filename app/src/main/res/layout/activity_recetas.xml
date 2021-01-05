@@ -2,8 +2,10 @@
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".RecetasActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -19,7 +21,6 @@
             app:popupTheme="@style/Theme.AppEasyShop.PopupOverlay" />
 
     </com.google.android.material.appbar.AppBarLayout>
-
 
     <include layout="@layout/content_recetas" />
 
