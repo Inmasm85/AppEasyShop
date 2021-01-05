@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content_main"
+    android:id="@+id/content_categoria"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -10,8 +10,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.appeasyshop.MainActivity"
-    tools:showIn="@layout/activity_main">
+    tools:context="com.example.appeasyshop.Categoria"
+    tools:showIn="@layout/activity_categoria" >  <!-- ojo con el layaout -->
 
 
     <ImageView
@@ -57,9 +57,7 @@
         android:layout_marginStart="120dp"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="120dp"
-        android:text="@string/categorias"
+        android:text="@string/categoriaX"
         android:textAlignment="center"
         android:textSize="18sp" />
-
-
 </RelativeLayout>
