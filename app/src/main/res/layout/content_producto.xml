@@ -82,23 +82,26 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="127dp"
+        android:layout_marginTop="120dp"
         android:layout_marginBottom="110dp"
         android:text="@string/unidades"
+        android:textAlignment="center"
         android:textSize="18sp" />
 
     <EditText
         android:id="@+id/editTextNumber"
-        android:layout_width="116dp"
-        android:layout_height="25dp"
+        android:layout_width="80dp"
+        android:layout_height="40dp"
         android:layout_below="@+id/tvProductDescrip"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="23dp"
-        android:layout_marginTop="130dp"
+        android:layout_marginTop="110dp"
         android:layout_marginBottom="110dp"
         android:layout_toEndOf="@+id/textView2"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="number"
+        android:text="@string/uno"
+        android:textAlignment="textEnd" />
 
     <Button
         android:id="@+id/button"
