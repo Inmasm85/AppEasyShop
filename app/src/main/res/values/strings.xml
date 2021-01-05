@@ -27,12 +27,9 @@
     <string name="uno">1</string>
 
 
-
-
-
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-
+    <string name="title_activity_recetas">RecetasActivity</string>
 
 
 </resources>
