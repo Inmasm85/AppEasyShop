@@ -33,11 +33,14 @@
     <string name="tituloRecetaX">Receta X</string>
     <string name="descripcionReceta">Ingredientes para 4 personas: 3 zanahorias, guisantes, cebolla, 2 huevos, ....</string>
     <string name="VolverARecetas">Volver a recetas</string>
-    <string name="title_activity_resumen_pedido">ResumenPedidoActivity</string>
 
     <!-- Pedidos -->
     <string name="pedido">Pedido</string>
     <string name="seguirComprando">Seguir Comprando</string>
+    <string name="finalizarPedido">Finalizar Pedido</string>
+    <string name="title_activity_resumen_pedido">Resumen del Pedido</string>
+
+
 
 
 

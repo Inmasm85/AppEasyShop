@@ -49,7 +49,7 @@
         android:textSize="18sp" />
 
     <ListView
-        android:id="@+id/listViewRecetas"
+        android:id="@+id/listViewArticulosPedido"
         android:layout_width="395dp"
         android:layout_height="410dp"
         android:layout_below="@+id/textPedido"

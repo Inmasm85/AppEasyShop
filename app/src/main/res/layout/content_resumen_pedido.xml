@@ -39,36 +39,44 @@
         android:textSize="18sp" />
 
     <ListView
-        android:id="@+id/listViewRecetas"
-        android:layout_width="473dp"
-        android:layout_height="594dp"
-        android:layout_above="@+id/button4"
+        android:id="@+id/listViewArticulosPedido"
+        android:layout_width="450dp"
+        android:layout_height="550dp"
+
         android:layout_below="@+id/textPedido"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="0dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="30dp"
+
         android:layout_marginEnd="0dp"
-        android:layout_marginBottom="-739dp" />
+        android:layout_marginBottom="25dp" />
 
     <Button
         android:id="@+id/buttonSeguirComprando"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/listViewArticulosPedido"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="61dp"
-        android:layout_marginTop="22dp"
-        android:layout_marginBottom="27dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="30dp"
         android:text="@string/seguirComprando" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnFinalizarPedido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="79dp"
+        android:layout_below="@+id/listViewArticulosPedido"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="30dp"
         android:layout_toEndOf="@+id/buttonSeguirComprando"
-        android:text="Button" />
+        android:text="@string/finalizarPedido" />
 
 
 </RelativeLayout>
