@@ -18,7 +18,7 @@
     <string name="title_activity_categoria">Categoria</string>
     <string name="categoriaX">CategoríaX</string>
 
-    <!-- Producto -->
+    <!-- Productos -->
     <string name="title_activity_producto">Producto</string>
     <string name="productoX">Producto X</string>
     <string name="descripcionProducto">Brick de 1 L de leche desnadata. Procedencia: España</string>
@@ -33,8 +33,11 @@
     <string name="tituloRecetaX">Receta X</string>
     <string name="descripcionReceta">Ingredientes para 4 personas: 3 zanahorias, guisantes, cebolla, 2 huevos, ....</string>
     <string name="VolverARecetas">Volver a recetas</string>
+    <string name="title_activity_resumen_pedido">ResumenPedidoActivity</string>
 
-
+    <!-- Pedidos -->
+    <string name="pedido">Pedido</string>
+    <string name="seguirComprando">Seguir Comprando</string>
 
 
 

@@ -35,7 +35,7 @@
 
 
     <TextView
-        android:id="@+id/textRecetaX"
+        android:id="@+id/textPedido"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageLogo"
@@ -52,7 +52,7 @@
         android:id="@+id/imageView"
         android:layout_width="169dp"
         android:layout_height="81dp"
-        android:layout_below="@+id/textRecetaX"
+        android:layout_below="@+id/textPedido"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="113dp"
