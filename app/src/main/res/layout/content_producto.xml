@@ -25,7 +25,7 @@
         android:src="@drawable/logotienda" />
 
     <SearchView
-        android:id="@+id/searchReceta"
+        android:id="@+id/searchWords"
         android:layout_width="187dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -35,7 +35,7 @@
         android:layout_toEndOf="@+id/imageLogo" />
 
     <TextView
-        android:id="@+id/textRecetas"
+        android:id="@+id/textRecetaX"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageLogo"
@@ -52,7 +52,7 @@
         android:id="@+id/imageView"
         android:layout_width="169dp"
         android:layout_height="81dp"
-        android:layout_below="@+id/textRecetas"
+        android:layout_below="@+id/textRecetaX"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="113dp"
@@ -61,7 +61,7 @@
         android:src="@drawable/cartonleche" />
 
     <TextView
-        android:id="@+id/tvProductDescrip"
+        android:id="@+id/textDescripcionReceta"
         android:layout_width="300dp"
         android:layout_height="80dp"
         android:layout_below="@+id/imageView"
@@ -78,7 +78,7 @@
         android:id="@+id/textView2"
         android:layout_width="89dp"
         android:layout_height="39dp"
-        android:layout_below="@+id/tvProductDescrip"
+        android:layout_below="@+id/textDescripcionReceta"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
@@ -92,7 +92,7 @@
         android:id="@+id/editTextNumber"
         android:layout_width="80dp"
         android:layout_height="40dp"
-        android:layout_below="@+id/tvProductDescrip"
+        android:layout_below="@+id/textDescripcionReceta"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="23dp"
         android:layout_marginTop="110dp"
@@ -104,10 +104,10 @@
         android:textAlignment="textEnd" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/buttonVolver"
         android:layout_width="128dp"
         android:layout_height="59dp"
-        android:layout_below="@+id/tvProductDescrip"
+        android:layout_below="@+id/textDescripcionReceta"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="18dp"

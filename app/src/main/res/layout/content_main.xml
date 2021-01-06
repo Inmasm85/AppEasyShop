@@ -28,7 +28,7 @@
         android:id="@+id/listViewRecetas"
         android:layout_width="395dp"
         android:layout_height="410dp"
-        android:layout_below="@+id/textRecetas"
+        android:layout_below="@+id/textRecetaX"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
@@ -38,7 +38,7 @@
         android:layout_marginBottom="8dp" />
 
     <SearchView
-        android:id="@+id/searchReceta"
+        android:id="@+id/searchWords"
         android:layout_width="187dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -48,7 +48,7 @@
         android:layout_toEndOf="@+id/imageLogo" />
 
     <TextView
-        android:id="@+id/textRecetas"
+        android:id="@+id/textRecetaX"
         android:layout_width="155dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageLogo"

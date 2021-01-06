@@ -10,6 +10,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppEasyShop">
         <activity
+            android:name=".RecetaXActivity"
+            android:label="@string/title_activity_receta_x"
+            android:theme="@style/Theme.AppEasyShop.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".RecetasActivity"
             android:label="@string/title_activity_recetas"
             android:theme="@style/Theme.AppEasyShop.NoActionBar">

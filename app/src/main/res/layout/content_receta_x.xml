@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/content_categoria"
+    android:id="@+id/content_receta_x"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -10,9 +10,8 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.appeasyshop.Categoria"
-    tools:showIn="@layout/activity_categoria" >  <!-- ojo con el layaout -->
-
+    tools:context="com.example.appeasyshop.RecetaXActivity"
+    tools:showIn="@layout/activity_recetax">
 
     <ImageView
         android:id="@+id/imageLogo"
@@ -24,19 +23,6 @@
         android:layout_marginTop="25dp"
         android:src="@drawable/logotienda" />
 
-    <ListView
-        android:id="@+id/listViewRecetas"
-        android:layout_width="395dp"
-        android:layout_height="410dp"
-        android:layout_below="@+id/textRecetaX"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="8dp" />
-
     <SearchView
         android:id="@+id/searchWords"
         android:layout_width="187dp"
@@ -46,6 +32,7 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="26dp"
         android:layout_toEndOf="@+id/imageLogo" />
+
 
     <TextView
         android:id="@+id/textRecetaX"
@@ -57,7 +44,50 @@
         android:layout_marginStart="120dp"
         android:layout_marginTop="34dp"
         android:layout_marginEnd="120dp"
-        android:text="@string/categoriaX"
+        android:text="@string/tituloRecetaX"
         android:textAlignment="center"
         android:textSize="18sp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="169dp"
+        android:layout_height="81dp"
+        android:layout_below="@+id/textRecetaX"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="113dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="113dp"
+        android:src="@drawable/receta" />
+
+
+    <TextView
+        android:id="@+id/textDescripcionReceta"
+        android:layout_width="357dp"
+        android:layout_height="289dp"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="15dp"
+        android:text="@string/descripcionReceta"
+        android:textAlignment="textStart"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/buttonVolver"
+        android:layout_width="194dp"
+        android:layout_height="63dp"
+        android:layout_below="@+id/textDescripcionReceta"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="0dp"
+        android:text="@string/VolverARecetas" />
+
+
 </RelativeLayout>
