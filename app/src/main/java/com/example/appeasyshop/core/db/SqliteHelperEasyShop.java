@@ -1,10 +1,12 @@
 package com.example.appeasyshop.core.db;
 
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 import com.example.appeasyshop.core.entities.Categoria;
+import com.example.appeasyshop.core.entities.LineaPedido;
 
 public class SqliteHelperEasyShop extends SQLiteOpenHelper {
 
@@ -27,6 +29,16 @@ public class SqliteHelperEasyShop extends SQLiteOpenHelper {
     }
 
     @Override
+    public void onOpen(SQLiteDatabase db) {
+        super.onOpen(db);
+
+        if (!db.isReadOnly()) {
+            // Cuando se abre la conexión, se activa el soporte para claves foráneas
+            db.execSQL("PRAGMA foreign_keys = ON");
+        }
+    }
+
+    @Override
     public void onCreate(SQLiteDatabase db) {
 
         db.execSQL("CREATE TABLE " + CategoriaEntry.TABLE_NAME + " (" +
@@ -44,7 +56,23 @@ public class SqliteHelperEasyShop extends SQLiteOpenHelper {
                     CategoriaEntry.TABLE_NAME + "(" + CategoriaEntry.COLUMN_NAME_ID + ") " +
                 "); ");
 
-        // DML
+        db.execSQL("CREATE TABLE " + PedidoEntry.TABLE_NAME + " (" +
+                PedidoEntry.COLUMN_NAME_ID + " ROWID, " +
+                PedidoEntry.COLUMN_NAME_TLFNO + "VARCHAR NOT NULL, " +
+                PedidoEntry.COLUMN_NAME_CLIENTE +  "VARCHAR NOT NULL); " );
+
+        db.execSQL("CREATE TABLE " + LineaPedidoEntry.TABLE_NAME + " (" +
+                LineaPedidoEntry.COLUMN_NAME_PEDIDO_ID + " INTEGER, " +
+                LineaPedidoEntry.COLUMN_NAME_PRODUCTO_ID + " INTEGER, " +
+                LineaPedidoEntry.COLUMN_NAME_CANTIDAD + " INTEGER, " +
+                " PRIMARY KEY(" +  LineaPedidoEntry.COLUMN_NAME_PEDIDO_ID + ", " +
+                        LineaPedidoEntry.COLUMN_NAME_PRODUCTO_ID + "), " +
+                " FOREIGN KEY(" +  LineaPedidoEntry.COLUMN_NAME_PEDIDO_ID + ") REFERENCES " +
+                        PedidoEntry.TABLE_NAME + "(" + PedidoEntry.COLUMN_NAME_ID + "), " +
+                " FOREIGN KEY(" +  LineaPedidoEntry.COLUMN_NAME_PRODUCTO_ID + ")  REFERENCES " +
+                        ProductoEntry.TABLE_NAME + "( " + ProductoEntry.COLUMN_NAME_ID + ") " + "); ");
+
+                // DML
 
         // ------ Categorias ---------
         db.execSQL("INSERT INTO " + CategoriaEntry.TABLE_NAME + " (" +
@@ -94,4 +122,5 @@ public class SqliteHelperEasyShop extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
         // No hacer nada.
     }
+
 }

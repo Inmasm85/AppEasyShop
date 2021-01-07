@@ -50,7 +50,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Categoria"
+            android:name=".CategoriaActivity"
             android:label="@string/title_activity_categoria"
             android:theme="@style/Theme.AppEasyShop.NoActionBar">
             <intent-filter>
