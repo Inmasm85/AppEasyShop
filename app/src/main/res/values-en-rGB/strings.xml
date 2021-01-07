@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Easy Shop</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <!-- Menu items -->
+    <string name="action_pedido">Order</string>
+    <string name="action_recetas">Recipes</string>
+    <string name="action_categorias">Categories</string>
+
+    <!-- Categorias -->
+    <string name="buscarCategoria">Search categories</string>
+    <string name="categorias">Categories</string>
+    <string name="title_activity_categoria">Category</string>
+    <string name="categoriaX">CategoryX</string>
+
+    <!-- Productos -->
+    <string name="title_activity_producto">Product</string>
+    <string name="productoX">Product X</string>
+    <string name="descripcionProducto">1 L skimmed milk brick. Origin: Spain</string>
+    <string name="unidades">Units</string>
+    <string name="comprar">Buy</string>
+    <string name="uno">1</string>
+
+    <!-- Recetas -->
+    <string name="title_activity_recetas">Recipes</string>
+    <string name="recetas">Recipes</string>
+    <string name="title_activity_receta_x">Recipes</string>
+    <string name="tituloRecetaX">Recipe X</string>
+    <string name="descripcionReceta">Ingredients for 4 people: 3 carrots, green peas, onion, 2 eggs, ....</string>
+    <string name="VolverARecetas">Back to recipes</string>
+
+    <!-- Pedidos -->
+    <string name="pedido">Order</string>
+    <string name="seguirComprando">Keep buying</string>
+    <string name="finalizarPedido">Finalize order</string>
+    <string name="title_activity_resumen_pedido">Order summary</string>
+
+
+
+
+
+</resources>
