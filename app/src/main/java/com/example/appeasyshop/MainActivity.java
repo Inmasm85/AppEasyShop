@@ -2,6 +2,7 @@ package com.example.appeasyshop;
 
 import android.os.Bundle;
 
+import com.example.appeasyshop.core.db.SqliteHelperEasyShop;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
@@ -18,6 +19,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        SqliteHelperEasyShop db = SqliteHelperEasyShop.getInstance(this);
+        db.getWritableDatabase();
+
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

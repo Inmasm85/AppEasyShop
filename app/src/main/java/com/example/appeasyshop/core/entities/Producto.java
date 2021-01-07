@@ -4,21 +4,27 @@ public class Producto {
 
     private int id;
     private String nombre;
-    private double precio;
+    private double precioUD;
+    private double precioKg;
     private String descripcion;
 
-    Producto(String nombre, String descripcion, double precio) {
+    Producto(String nombre, String descripcion, double precioUD, double precioKg) {
         this.nombre = nombre;
-        this.precio = precio;
+        this.precioUD = precioUD;
+        this.precioKg = precioKg;
         this.descripcion = descripcion;
-    }
-
-    public double getPrecio() {
-        return precio;
     }
 
     public String getNombre() {
         return nombre;
+    }
+
+    public double getPrecioUD() {
+        return precioUD;
+    }
+
+    public double getPrecioKg() {
+        return precioKg;
     }
 
     public String getDescripcion() {
