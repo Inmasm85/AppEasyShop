@@ -1,6 +1,8 @@
 package com.example.appeasyshop;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
 
@@ -12,11 +14,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.appeasyshop.core.entities.Carrito;
 import com.example.appeasyshop.core.entities.ProductoPorCantidad;
+
+import java.io.IOException;
+import java.io.InputStream;
 
 public class Producto extends AppCompatActivity implements View.OnClickListener{
 
@@ -27,6 +33,7 @@ public class Producto extends AppCompatActivity implements View.OnClickListener{
     private TextView magnitudText;
     private EditText cantidad;
     private Button btnComprar;
+    private ImageView imageView;
 
     private com.example.appeasyshop.core.entities.Producto producto;
 
@@ -43,6 +50,7 @@ public class Producto extends AppCompatActivity implements View.OnClickListener{
         magnitudText = findViewById(R.id.textViewMagnitud);
         cantidad = findViewById(R.id.editTextCantidad);
         btnComprar = findViewById(R.id.buttonComprar);
+        imageView = findViewById(R.id.imageView);
 
         // Rellenar valores.
         Intent intent = getIntent();
@@ -53,6 +61,14 @@ public class Producto extends AppCompatActivity implements View.OnClickListener{
 
         if (producto instanceof ProductoPorCantidad)
             magnitudText.setText(getString(R.string.magnitud_cantidad));
+
+        try {
+            InputStream in = getBaseContext().getAssets().open(producto.getPathToImage());
+            Bitmap bitmap = BitmapFactory.decodeStream(in);
+            imageView.setImageBitmap(bitmap);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         // Configuración de eventos.
         btnComprar.setOnClickListener(this);

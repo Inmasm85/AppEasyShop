@@ -10,4 +10,5 @@ public class ProductoEntry implements BaseColumns {
     static final String COLUMN_NAME_PRECIOKG = "precioKg";
     static final String COLUMN_NAME_DESCRIPCION = "descripcion";
     static final String COLUMN_NAME_CATEGORIA = "categoria";
+    static final String COLUMN_NAME_PATH_TO_IMAGE = "image_path";
 }

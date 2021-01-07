@@ -9,12 +9,14 @@ public abstract class Producto implements Serializable {
     private String nombre;
     private double precio;
     private String descripcion;
+    private String pathToImage;
 
-    public Producto(int id, String nombre, String descripcion, double precio) {
+    public Producto(int id, String nombre, String descripcion, double precio, String pathToImage) {
         this.id = id;
         this.nombre = nombre;
         this.precio = precio;
         this.descripcion = descripcion;
+        this.pathToImage = pathToImage;
     }
 
     public String getNombre() {
@@ -44,5 +46,9 @@ public abstract class Producto implements Serializable {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    public String getPathToImage() {
+        return  pathToImage;
     }
 }

@@ -42,7 +42,8 @@ public class ProductosDAO {
                 ProductoEntry.COLUMN_NAME_NOMBRE,
                 ProductoEntry.COLUMN_NAME_PRECIOKG,
                 ProductoEntry.COLUMN_NAME_PRECIOUD,
-                ProductoEntry.COLUMN_NAME_DESCRIPCION
+                ProductoEntry.COLUMN_NAME_DESCRIPCION,
+                ProductoEntry.COLUMN_NAME_PATH_TO_IMAGE
         };
         String selection = ProductoEntry.COLUMN_NAME_NOMBRE + " LIKE ? " +
                 " AND " + ProductoEntry.COLUMN_NAME_CATEGORIA  + " = ? ";
@@ -67,6 +68,7 @@ public class ProductosDAO {
         String descripcion;
         double precioUnidad;
         double precioKg;
+        String imagePath;
 
         while(cursor.moveToNext()){
             id = cursor.getInt(0);
@@ -74,6 +76,7 @@ public class ProductosDAO {
             precioKg = cursor.getDouble(2);
             precioUnidad = cursor.getDouble(3);
             descripcion = cursor.getString(4);
+            imagePath = cursor.getString(5);
             Producto producto;
 
             if (precioKg > 0) {
@@ -81,7 +84,8 @@ public class ProductosDAO {
                         id,
                         nombre,
                         descripcion,
-                        precioKg
+                        precioKg,
+                        imagePath
                 );
             }
             else {
@@ -89,7 +93,8 @@ public class ProductosDAO {
                         id,
                         nombre,
                         descripcion,
-                        precioUnidad
+                        precioUnidad,
+                        imagePath
                 );
             }
 
