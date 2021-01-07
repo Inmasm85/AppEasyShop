@@ -15,8 +15,26 @@ public class Pedido {
         productos = new ArrayList<>();
     }
 
-    public void anyadir(LineaPedido linea) {
-        this.productos.add(linea);
+    public void anyadir(LineaPedido nuevaLinea) {
+        LineaPedido lineaAux = null;
+        int i = 0;
+
+        while (lineaAux == null && i < productos.size()) {
+            LineaPedido lineaPedido = productos.get(i);
+
+            if (lineaPedido.equals(nuevaLinea))
+                lineaAux = lineaPedido;
+
+            i++;
+        }
+
+        if (lineaAux == null)
+            productos.add(nuevaLinea);
+        else {
+            int suma = lineaAux.getCantidad() + nuevaLinea.getCantidad();
+            lineaAux.setCantidad(suma);
+        }
+
     }
 
     public void quitar(LineaPedido linea) {
@@ -49,5 +67,11 @@ public class Pedido {
 
     void setId(int id) {
         this.id = id;
+    }
+
+    public double getTotal() {
+        return productos.stream()
+                .mapToDouble((l) -> l.getCantidad() * l.getProducto().getPrecio())
+                .sum();
     }
 }

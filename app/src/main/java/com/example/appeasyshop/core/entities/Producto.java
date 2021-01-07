@@ -1,17 +1,19 @@
 package com.example.appeasyshop.core.entities;
 
-public class Producto {
+import java.io.Serializable;
+import java.util.Objects;
+
+public abstract class Producto implements Serializable {
 
     private int id;
     private String nombre;
-    private double precioUD;
-    private double precioKg;
+    private double precio;
     private String descripcion;
 
-    Producto(String nombre, String descripcion, double precioUD, double precioKg) {
+    public Producto(int id, String nombre, String descripcion, double precio) {
+        this.id = id;
         this.nombre = nombre;
-        this.precioUD = precioUD;
-        this.precioKg = precioKg;
+        this.precio = precio;
         this.descripcion = descripcion;
     }
 
@@ -19,12 +21,8 @@ public class Producto {
         return nombre;
     }
 
-    public double getPrecioUD() {
-        return precioUD;
-    }
-
-    public double getPrecioKg() {
-        return precioKg;
+    public double getPrecio() {
+        return precio;
     }
 
     public String getDescripcion() {
@@ -35,8 +33,16 @@ public class Producto {
         return id;
     }
 
-    void setId(int id) {
-        this.id = id;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Producto producto = (Producto) o;
+        return id == producto.id;
     }
 
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
+    }
 }

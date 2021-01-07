@@ -1,9 +1,8 @@
 package com.example.appeasyshop;
 
+import android.content.Intent;
 import android.os.Bundle;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -11,8 +10,25 @@ import androidx.appcompat.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
-public class Producto extends AppCompatActivity {
+import com.example.appeasyshop.core.entities.Carrito;
+import com.example.appeasyshop.core.entities.ProductoPorCantidad;
+
+public class Producto extends AppCompatActivity implements View.OnClickListener{
+
+    public static final String INTENT_EXTRA_PRODUCTO = "producto";
+
+    private TextView nombreText;
+    private TextView descripcionText;
+    private TextView magnitudText;
+    private EditText cantidad;
+    private Button btnComprar;
+
+    private com.example.appeasyshop.core.entities.Producto producto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +36,27 @@ public class Producto extends AppCompatActivity {
         setContentView(R.layout.activity_producto);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        // Asignación de valores.
+        nombreText = findViewById(R.id.textPedido);
+        descripcionText = findViewById(R.id.textDescripcionReceta);
+        magnitudText = findViewById(R.id.textViewMagnitud);
+        cantidad = findViewById(R.id.editTextCantidad);
+        btnComprar = findViewById(R.id.buttonComprar);
+
+        // Rellenar valores.
+        Intent intent = getIntent();
+        producto = (com.example.appeasyshop.core.entities.Producto) intent.getSerializableExtra(INTENT_EXTRA_PRODUCTO);
+
+        nombreText.setText(producto.getNombre());
+        descripcionText.setText(producto.getDescripcion());
+
+        if (producto instanceof ProductoPorCantidad)
+            magnitudText.setText(getString(R.string.magnitud_cantidad));
+
+        // Configuración de eventos.
+        btnComprar.setOnClickListener(this);
+
 
     }
 
@@ -43,6 +80,9 @@ public class Producto extends AppCompatActivity {
         }
 
         if( id == R.id.action_categorias){
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
             return true;
         }
 
@@ -51,5 +91,16 @@ public class Producto extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View view) {
+        int valorCantidad = Integer.parseInt( cantidad.getText().toString() );
+
+        Carrito.getInstance()
+                .comprar(producto, valorCantidad);
+
+        (Toast.makeText(this, getString(R.string.toast_producto_anniadido_carrito), Toast.LENGTH_SHORT)).show();
+
     }
 }

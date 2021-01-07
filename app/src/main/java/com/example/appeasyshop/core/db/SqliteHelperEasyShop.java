@@ -43,7 +43,8 @@ public class SqliteHelperEasyShop extends SQLiteOpenHelper {
 
         db.execSQL("CREATE TABLE " + CategoriaEntry.TABLE_NAME + " (" +
                 CategoriaEntry.COLUMN_NAME_NOMBRE + " VARCHAR NOT NULL, " +
-                CategoriaEntry.COLUMN_NAME_ID + " ROWID); ");
+                CategoriaEntry.COLUMN_NAME_ID + " ROWID, " +
+                CategoriaEntry.COLUMN_NAME_IMAGE_PATH + " TEXT NOT NULL); ");
 
         db.execSQL("CREATE TABLE " + ProductoEntry.TABLE_NAME + " (" +
                 ProductoEntry.COLUMN_NAME_NOMBRE + " VARCHAR NOT NULL, " +
@@ -77,23 +78,27 @@ public class SqliteHelperEasyShop extends SQLiteOpenHelper {
         // ------ Categorias ---------
         db.execSQL("INSERT INTO " + CategoriaEntry.TABLE_NAME + " (" +
                     CategoriaEntry.COLUMN_NAME_ID + ", " +
-                    CategoriaEntry.COLUMN_NAME_NOMBRE + ") " +
-                " VALUES (1, 'BEBIDAS'); ");
+                    CategoriaEntry.COLUMN_NAME_NOMBRE + ", " +
+                    CategoriaEntry.COLUMN_NAME_IMAGE_PATH + ") " +
+                " VALUES (1, 'BEBIDAS', 'bebidas.jpg'); ");
 
         db.execSQL("INSERT INTO " + CategoriaEntry.TABLE_NAME + " (" +
                 CategoriaEntry.COLUMN_NAME_ID + ", " +
-                CategoriaEntry.COLUMN_NAME_NOMBRE + ") " +
-                " VALUES (2, 'CHARCUTERIA'); ");
+                CategoriaEntry.COLUMN_NAME_NOMBRE + ", " +
+                CategoriaEntry.COLUMN_NAME_IMAGE_PATH + ") " +
+                " VALUES (2, 'CHARCUTERIA', 'charcuteria.jpg'); ");
 
         db.execSQL("INSERT INTO " + CategoriaEntry.TABLE_NAME + " (" +
                 CategoriaEntry.COLUMN_NAME_ID + ", " +
-                CategoriaEntry.COLUMN_NAME_NOMBRE + ") " +
-                " VALUES (3, 'PESCADERIA'); ");
+                CategoriaEntry.COLUMN_NAME_NOMBRE + ", " +
+                CategoriaEntry.COLUMN_NAME_IMAGE_PATH + ") " +
+                " VALUES (3, 'PESCADERIA', 'pescaderia.png'); ");
 
         db.execSQL("INSERT INTO " + CategoriaEntry.TABLE_NAME + " (" +
                 CategoriaEntry.COLUMN_NAME_ID + ", " +
-                CategoriaEntry.COLUMN_NAME_NOMBRE + ") " +
-                " VALUES (4, 'FRUTERIA'); ");
+                CategoriaEntry.COLUMN_NAME_NOMBRE + ", " +
+                CategoriaEntry.COLUMN_NAME_IMAGE_PATH + ") " +
+                " VALUES (4, 'FRUTERIA', 'fruteria.png'); ");
 
 
         // --------- Productos ----------

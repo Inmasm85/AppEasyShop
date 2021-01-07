@@ -24,26 +24,16 @@
         android:layout_marginTop="25dp"
         android:src="@drawable/logotienda" />
 
-    <SearchView
-        android:id="@+id/searchWords"
-        android:layout_width="187dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="26dp"
-        android:layout_toEndOf="@+id/imageLogo" />
-
     <TextView
         android:id="@+id/textPedido"
-        android:layout_width="155dp"
+        android:layout_width="355dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageLogo"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="120dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="34dp"
-        android:layout_marginEnd="120dp"
+        android:layout_marginEnd="20dp"
         android:text="@string/productoX"
         android:textAlignment="center"
         android:textSize="18sp" />
@@ -75,7 +65,7 @@
         android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewMagnitud"
         android:layout_width="89dp"
         android:layout_height="39dp"
         android:layout_below="@+id/textDescripcionReceta"
@@ -89,7 +79,7 @@
         android:textSize="18sp" />
 
     <EditText
-        android:id="@+id/editTextNumber"
+        android:id="@+id/editTextCantidad"
         android:layout_width="80dp"
         android:layout_height="40dp"
         android:layout_below="@+id/textDescripcionReceta"
@@ -97,14 +87,14 @@
         android:layout_marginStart="23dp"
         android:layout_marginTop="110dp"
         android:layout_marginBottom="110dp"
-        android:layout_toEndOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textViewMagnitud"
         android:ems="10"
         android:inputType="number"
         android:text="@string/uno"
         android:textAlignment="textEnd" />
 
     <Button
-        android:id="@+id/buttonVolver"
+        android:id="@+id/buttonComprar"
         android:layout_width="128dp"
         android:layout_height="59dp"
         android:layout_below="@+id/textDescripcionReceta"
@@ -114,7 +104,7 @@
         android:layout_marginTop="110dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="110dp"
-        android:layout_toEndOf="@+id/editTextNumber"
+        android:layout_toEndOf="@+id/editTextCantidad"
         android:text="@string/comprar" />
 
 

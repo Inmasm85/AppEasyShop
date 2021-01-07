@@ -18,7 +18,7 @@ public class CategoriasDAO {
         easyshopDB = SqliteHelperEasyShop.getInstance(context);
     }
 
-    private static CategoriasDAO getInstance(Context context) {
+    public static CategoriasDAO getInstance(Context context) {
 
         if (instance == null)
             instance = new CategoriasDAO(context);
@@ -26,20 +26,23 @@ public class CategoriasDAO {
         return instance;
     }
 
-    private List<Categoria> listarCategorias() {
+    public List<Categoria> listarCategorias(String parteNombre) {
         List<Categoria> listadoCategorias = new ArrayList<>();
         SQLiteDatabase db = easyshopDB.getReadableDatabase();
         
         String [] projection = new String[] {
                 CategoriaEntry.COLUMN_NAME_ID,
-                CategoriaEntry.COLUMN_NAME_NOMBRE
+                CategoriaEntry.COLUMN_NAME_NOMBRE,
+                CategoriaEntry.COLUMN_NAME_IMAGE_PATH
         };
+        String selection = CategoriaEntry.COLUMN_NAME_NOMBRE + " LIKE ? ";
+        String [] selectionArgs = new String [] {parteNombre+"%"};
         
         Cursor cursor = db.query(
                 CategoriaEntry.TABLE_NAME,
                 projection,
-                null,
-                null,
+                selection,
+                selectionArgs,
                 null,
                 null,
                 CategoriaEntry.COLUMN_NAME_ID
@@ -47,11 +50,13 @@ public class CategoriasDAO {
 
         int id;
         String nombre;
+        String pathToImage;
 
         while(cursor.moveToNext()){
             id = cursor.getInt(0);
             nombre = cursor.getString(1);
-            listadoCategorias.add(new Categoria(id, nombre));
+            pathToImage = cursor.getString(2);
+            listadoCategorias.add(new Categoria(id, nombre, pathToImage));
         }
 
         return listadoCategorias;

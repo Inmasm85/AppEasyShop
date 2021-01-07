@@ -39,7 +39,7 @@
         android:textSize="18sp" />
 
     <ListView
-        android:id="@+id/listViewArticulosPedido"
+        android:id="@+id/listViewCategorias"
         android:layout_width="450dp"
         android:layout_height="550dp"
 
@@ -56,7 +56,7 @@
         android:id="@+id/buttonSeguirComprando"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/listViewArticulosPedido"
+        android:layout_below="@+id/listViewCategorias"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="25dp"
@@ -68,7 +68,7 @@
         android:id="@+id/btnFinalizarPedido"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/listViewArticulosPedido"
+        android:layout_below="@+id/listViewCategorias"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="45dp"

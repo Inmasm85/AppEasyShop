@@ -1,17 +1,20 @@
 package com.example.appeasyshop.core.entities;
 
+import java.io.Serializable;
 import java.util.Collections;
 import java.util.List;
 
-public class Categoria {
+public class Categoria implements Serializable {
 
     private int id;
     private String nombre;
+    private String pathToImage;
     private List<Producto> productos;
 
-    public Categoria(int id, String nombre){
+    public Categoria(int id, String nombre, String pathToImage){
         this.id = id;
         this.nombre = nombre;
+        this.pathToImage = pathToImage;
     }
 
     public Categoria(String nombre) {
@@ -34,4 +37,7 @@ public class Categoria {
         this.id = id;
     }
 
+    public String getPathToImage() {
+        return pathToImage;
+    }
 }

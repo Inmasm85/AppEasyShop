@@ -25,7 +25,7 @@
         android:src="@drawable/logotienda" />
 
     <ListView
-        android:id="@+id/listViewArticulosPedido"
+        android:id="@+id/listViewCategorias"
         android:layout_width="395dp"
         android:layout_height="410dp"
         android:layout_below="@+id/textPedido"
@@ -49,14 +49,14 @@
 
     <TextView
         android:id="@+id/textPedido"
-        android:layout_width="155dp"
+        android:layout_width="195dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/imageLogo"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="120dp"
+        android:layout_marginStart="100dp"
         android:layout_marginTop="34dp"
-        android:layout_marginEnd="120dp"
+        android:layout_marginEnd="100dp"
         android:text="@string/categoriaX"
         android:textAlignment="center"
         android:textSize="18sp" />

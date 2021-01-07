@@ -39,9 +39,10 @@
     <string name="seguirComprando">Seguir Comprando</string>
     <string name="finalizarPedido">Finalizar Pedido</string>
     <string name="title_activity_resumen_pedido">Resumen del Pedido</string>
-
-
-
+    <string name="rs_categoria_no_encontrada">No se han encontrado categorias</string>
+    <string name="rs_productos_no_encontrados">No se encontraron productos</string>
+    <string name="magnitud_cantidad">Cantidad</string>
+    <string name="toast_producto_anniadido_carrito">Producto añadido al carrito</string>
 
 
 </resources>

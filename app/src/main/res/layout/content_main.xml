@@ -25,7 +25,7 @@
         android:src="@drawable/logotienda" />
 
     <ListView
-        android:id="@+id/listViewArticulosPedido"
+        android:id="@+id/listViewCategorias"
         android:layout_width="395dp"
         android:layout_height="410dp"
         android:layout_below="@+id/textPedido"

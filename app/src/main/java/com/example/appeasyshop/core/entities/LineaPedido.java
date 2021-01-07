@@ -1,5 +1,7 @@
 package com.example.appeasyshop.core.entities;
 
+import java.util.Objects;
+
 public class LineaPedido {
 
     private Producto producto;
@@ -24,5 +26,18 @@ public class LineaPedido {
 
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        LineaPedido that = (LineaPedido) o;
+        return Objects.equals(producto, that.producto);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(producto);
     }
 }
