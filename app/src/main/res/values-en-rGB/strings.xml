@@ -41,6 +41,10 @@
     <string name="seguirComprando">Keep buying</string>
     <string name="finalizarPedido">Finalize order</string>
     <string name="title_activity_resumen_pedido">Order summary</string>
+    <string name="rs_categoria_no_encontrada">Category not found</string>
+    <string name="rs_productos_no_encontrados">Product not found</string>
+    <string name="magnitud_cantidad">Units</string>
+    <string name="toast_producto_anniadido_carrito">Product added to cart</string>
 
 
 
