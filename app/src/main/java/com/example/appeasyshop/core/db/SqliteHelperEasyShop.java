@@ -111,17 +111,17 @@ public class SqliteHelperEasyShop extends SQLiteOpenHelper {
                 ProductoEntry.COLUMN_NAME_PRECIOKG + ", " +
                 ProductoEntry.COLUMN_NAME_CATEGORIA + ", " +
                 ProductoEntry.COLUMN_NAME_PATH_TO_IMAGE + ") " +
-                " VALUES (1, 'Cocacola', 'Una bebida con mucho azúcar', 1.35, 0.00, 1, 'foto-comida-por-defecto.png')," +
-                " (2, 'Zumo de piña', 'Zumo natural recién exprimido', 1.50, 0.00, 1, 'foto-comida-por-defecto.png')," +
-                " (3, 'Aquarius', 'Bebida isotónica con sabor a naraja o limón', 1.55, 0.00, 1, 'foto-comida-por-defecto.png'), " +
-                " (4, 'Filetes de cerdo', 'Carne de cerdo fileteada de origen español', 0.00, 4.25, 2, 'foto-comida-por-defecto.png')," +
-                " (5, 'Pechuga de pollo', 'Carne de pollo criado en granjas de corral. Origen: España', 0.00, 3.40, 2, 'foto-comida-por-defecto.png')," +
-                " (6, 'Lomo embuchado', 'Lomo de cerdo embuchado con especias', 0.00, 2.30, 2, 'foto-comida-por-defecto.png')," +
-                " (7, 'Calamares', 'Pescado fresco. Origen: Málaga', 0.00, 4.56, 3, 'foto-comida-por-defecto.png')," +
-                " (8, 'Salmón','Salmón noruego cortado al peso', 0.00, 5.34, 3, 'foto-comida-por-defecto.png')," +
-                " (9, 'Tomate','Ricos tomates rojos', 0.00, 1.60, 4, 'foto-comida-por-defecto.png')," +
-                " (10, 'Aguacate','Importados desde sudamérica', 0.00, 3.20, 4, 'foto-comida-por-defecto.png')," +
-                " (11, 'Lechuga','Producto procedente de la agricultura andaluza', 0.00, 0.8, 4, 'foto-comida-por-defecto.png');");
+                " VALUES (1, 'Cocacola', 'Una bebida con mucho azúcar', 1.35, 0.00, 1, 'cola.jpg')," +
+                " (2, 'Zumo de piña', 'Zumo natural recién exprimido', 1.50, 0.00, 1, 'zumopina.jpg')," +
+                " (3, 'Aquarius', 'Bebida isotónica con sabor a naraja o limón', 1.55, 0.00, 1, 'aquarius.jpg'), " +
+                " (4, 'Filetes de cerdo', 'Carne de cerdo fileteada de origen español', 0.00, 4.25, 2, 'filetesCerdo.jpeg')," +
+                " (5, 'Pechuga de pollo', 'Carne de pollo criado en granjas de corral. Origen: España', 0.00, 3.40, 2, 'pechugapollo.jpeg')," +
+                " (6, 'Lomo embuchado', 'Lomo de cerdo embuchado con especias', 0.00, 2.30, 2, 'lomo-embuchado.jpg')," +
+                " (7, 'Calamares', 'Pescado fresco. Origen: Málaga', 0.00, 4.56, 3, 'calamares.jpeg')," +
+                " (8, 'Salmón','Salmón noruego cortado al peso', 0.00, 5.34, 3, 'salmon.jpg')," +
+                " (9, 'Tomate','Ricos tomates rojos', 0.00, 1.60, 4, 'tomate.png')," +
+                " (10, 'Aguacate','Importados desde sudamérica', 0.00, 3.20, 4, 'aguacate.jpg')," +
+                " (11, 'Lechuga','Producto procedente de la agricultura andaluza', 0.00, 0.8, 4, 'lechuga.jpg');");
 
     }
 
