@@ -18,74 +18,33 @@
         android:id="@+id/listViewResumenPedido"
         android:layout_width="400dp"
         android:layout_height="257dp"
-        android:layout_below="@+id/textViewPrecUd"
-        android:layout_marginTop="23dp" />
+        android:layout_below="@+id/tvResumenPedido"
+        android:layout_marginTop="40dp" />
 
     <TextView
         android:id="@+id/tvResumenPedido"
-        android:layout_width="264dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
 
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="98dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="60dp"
         android:text="@string/resumenPedido"
         android:textAlignment="center"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/textViewProducto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvResumenPedido"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="43dp"
-        android:text="@string/producto" />
-
-    <TextView
-        android:id="@+id/textViewCantidad"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvResumenPedido"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="40dp"
-        android:layout_toEndOf="@+id/textViewProducto"
-        android:text="@string/cantidad" />
-
-    <TextView
-        android:id="@+id/textViewPrecUd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvResumenPedido"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="41dp"
-        android:layout_toEndOf="@+id/textViewCantidad"
-        android:text="@string/precioUnidad" />
-
-    <TextView
-        android:id="@+id/textViewTotProd"
-        android:layout_width="82dp"
-        android:layout_height="22dp"
-        android:layout_below="@+id/tvResumenPedido"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="42dp"
-        android:layout_marginEnd="72dp"
-        android:layout_toEndOf="@+id/textViewPrecUd"
-        android:text="@string/totalProducto" />
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textTotalPedido"
-        android:layout_width="101dp"
-        android:layout_height="15dp"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
         android:layout_below="@+id/listViewResumenPedido"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="69dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="111dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="106dp"
         android:layout_toEndOf="@+id/tvTotalPedido"
         android:text="TextView" />
 
@@ -105,9 +64,9 @@
         android:layout_height="35dp"
         android:layout_below="@+id/textTotalPedido"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="72dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="14dp"
-        android:layout_marginEnd="97dp"
+        android:layout_marginEnd="70dp"
         android:layout_toEndOf="@+id/textViewNombre"
         android:ems="10"
         android:inputType="textPersonName"
@@ -120,7 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/textViewNombre"
         android:layout_alignParentStart="true"
-        android:layout_marginStart="49dp"
+        android:layout_marginStart="31dp"
         android:layout_marginTop="32dp"
         android:text="@string/telefono" />
 
@@ -130,9 +89,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/editTextNombre"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="60dp"
         android:layout_marginTop="9dp"
-        android:layout_marginEnd="107dp"
+        android:layout_marginEnd="70dp"
         android:layout_toEndOf="@+id/textView9"
         android:ems="10"
         android:inputType="number"
@@ -146,10 +105,12 @@
         android:layout_below="@+id/editTextTelefono"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="127dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="98dp"
+        android:layout_marginTop="40dp"
         android:layout_marginEnd="98dp"
-        android:text="@string/confirmarPedido" />
+        android:text="@string/confirmarPedido"
+        android:textAlignment="center"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/buttonAceptar"
