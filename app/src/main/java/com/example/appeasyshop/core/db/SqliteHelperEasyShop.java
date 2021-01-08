@@ -43,12 +43,12 @@ public class SqliteHelperEasyShop extends SQLiteOpenHelper {
 
         db.execSQL("CREATE TABLE " + CategoriaEntry.TABLE_NAME + " (" +
                 CategoriaEntry.COLUMN_NAME_NOMBRE + " VARCHAR NOT NULL, " +
-                CategoriaEntry.COLUMN_NAME_ID + " ROWID, " +
+                CategoriaEntry.COLUMN_NAME_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 CategoriaEntry.COLUMN_NAME_IMAGE_PATH + " TEXT NOT NULL); ");
 
         db.execSQL("CREATE TABLE " + ProductoEntry.TABLE_NAME + " (" +
                 ProductoEntry.COLUMN_NAME_NOMBRE + " VARCHAR NOT NULL, " +
-                ProductoEntry.COLUMN_NAME_ID + " ROWID, " +
+                ProductoEntry.COLUMN_NAME_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 ProductoEntry.COLUMN_NAME_DESCRIPCION + " TEXT, " +
                 ProductoEntry.COLUMN_NAME_PRECIOUD + " REAL, " +
                 ProductoEntry.COLUMN_NAME_PRECIOKG + " REAL, " +
@@ -59,9 +59,9 @@ public class SqliteHelperEasyShop extends SQLiteOpenHelper {
                 "); ");
 
         db.execSQL("CREATE TABLE " + PedidoEntry.TABLE_NAME + " (" +
-                PedidoEntry.COLUMN_NAME_ID + " ROWID, " +
-                PedidoEntry.COLUMN_NAME_TLFNO + "VARCHAR NOT NULL, " +
-                PedidoEntry.COLUMN_NAME_CLIENTE +  "VARCHAR NOT NULL); " );
+                PedidoEntry.COLUMN_NAME_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                PedidoEntry.COLUMN_NAME_TLFNO + " VARCHAR NOT NULL, " +
+                PedidoEntry.COLUMN_NAME_CLIENTE +  " VARCHAR NOT NULL); " );
 
         db.execSQL("CREATE TABLE " + LineaPedidoEntry.TABLE_NAME + " (" +
                 LineaPedidoEntry.COLUMN_NAME_PEDIDO_ID + " INTEGER, " +

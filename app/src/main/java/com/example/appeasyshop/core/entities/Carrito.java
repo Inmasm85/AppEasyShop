@@ -1,5 +1,9 @@
 package com.example.appeasyshop.core.entities;
 
+import android.content.Context;
+
+import com.example.appeasyshop.core.db.PedidoDAO;
+
 import java.util.Collections;
 import java.util.List;
 
@@ -37,9 +41,10 @@ public class Carrito {
         return Collections.unmodifiableList(pedido.getLineas());
     }
 
-    public void finalizar() {
-        // TODO: guardar el pedido
+    public void finalizar(Context context, String nombre, String telefono) throws PedidoException {
+        pedido.setNombreCliente(nombre);
+        pedido.setTelefono(telefono);
+        PedidoDAO.getInstance(context).guardar(pedido);
+        limpiar();
     }
-
-
 }

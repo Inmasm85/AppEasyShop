@@ -62,6 +62,13 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="rs_problema_en_pedido">El total es 0 o negativo, modifique el pedido</string>
+    <string name="btn_ok">OK</string>
+    <string name="err_pedido_nombre_vacio">Introduzca un nombre de cliente</string>
+    <string name="err_pedido_telefono_incorrecto">El teléfono tiene que tener 9 dígitos</string>
+    <string name="err_pedido_telefono_vacio">Introduzca el teléfono del cliente</string>
+    <string name="err_pedido_confirmacion">No se pudo confirmar el pedido</string>
+    <string name="pedido_confirmado">Pedido realizado correctamente</string>
 
 
 </resources>

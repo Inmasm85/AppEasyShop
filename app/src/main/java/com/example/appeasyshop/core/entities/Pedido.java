@@ -3,6 +3,7 @@ package com.example.appeasyshop.core.entities;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.regex.Pattern;
 
 public class Pedido {
 
@@ -49,7 +50,17 @@ public class Pedido {
         return telefono;
     }
 
-    public void setTelefono(String telefono) {
+    public void setTelefono(String telefono) throws PedidoException {
+
+        if (telefono == null || telefono.isEmpty())
+            throw new PedidoException(PedidoException.ERR_TELEFONO_VACIO);
+
+        String stringPattern = "[1-9][0-9]{8}";
+        Pattern patter = Pattern.compile(stringPattern);
+
+        if ( ! patter.matcher(telefono).matches() )
+            throw new PedidoException(PedidoException.ERR_TELEFONO_INCORRECTO);
+
         this.telefono = telefono;
     }
 
@@ -57,7 +68,11 @@ public class Pedido {
         return nombreCliente;
     }
 
-    public void setNombreCliente(String nombreCliente) {
+    public void setNombreCliente(String nombreCliente) throws PedidoException {
+
+        if ( nombreCliente == null || nombreCliente.isEmpty())
+            throw new PedidoException(PedidoException.ERR_NOMBRE_VACIO);
+
         this.nombreCliente = nombreCliente;
     }
 

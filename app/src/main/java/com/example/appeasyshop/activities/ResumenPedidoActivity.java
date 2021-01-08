@@ -1,5 +1,8 @@
 package com.example.appeasyshop.activities;
 
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.appeasyshop.R;
@@ -17,6 +20,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ResumenPedidoActivity extends AppCompatActivity implements View.OnClickListener{
 
@@ -49,6 +53,7 @@ public class ResumenPedidoActivity extends AppCompatActivity implements View.OnC
 
 
         btnSeguirComprando.setOnClickListener(this);
+        btnFinalizarPedido.setOnClickListener(this);
 
     }
 
@@ -89,8 +94,32 @@ public class ResumenPedidoActivity extends AppCompatActivity implements View.OnC
             finish();
         }
         else if (view.getId() == R.id.btnFinalizarPedido) {
-            // TODO: daa
+
+            if (Carrito.getInstance().getTotal() <= 0) {
+                mostrarMensajeErrorContacto(getString(R.string.rs_problema_en_pedido));
+                //(Toast.makeText(this, getString(R.string.rs_problema_en_pedido), Toast.LENGTH_LONG)).show();
+            }
+            else {
+                Intent intent = new Intent(this, ConfirmarPedidoActivity.class);
+                startActivity(intent);
+            }
         }
 
+    }
+
+
+
+    /**
+     * Muestra el mensaje correcto para el error que se ha producido en el contacto.
+     */
+
+    private void mostrarMensajeErrorContacto(String mensaje) {
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);;
+
+        dialogBuilder.setNegativeButton(R.string.btn_ok, null);
+        dialogBuilder.setMessage(mensaje);
+
+        Dialog dialog = dialogBuilder.create();
+        dialog.show();
     }
 }
