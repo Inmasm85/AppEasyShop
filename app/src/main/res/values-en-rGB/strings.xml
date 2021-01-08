@@ -40,12 +40,34 @@
     <string name="pedido">Order</string>
     <string name="seguirComprando">Keep buying</string>
     <string name="finalizarPedido">Finalize order</string>
-    <string name="title_activity_resumen_pedido">Order summary</string>
+
+    <string name="resumenPedido">Order summary</string>
+    <string name="totalPedido">Total order : </string>
+    <string name="nombre">Name: </string>
+    <string name="telefono">Telephone: </string>
+    <string name="confirmarPedido">Confirm the order</string>
+    <string name="aceptar">Accept</string>
+    <string name="volver">Back</string>
+
     <string name="rs_categoria_no_encontrada">Category not found</string>
     <string name="rs_productos_no_encontrados">Product not found</string>
     <string name="magnitud_cantidad">Units</string>
     <string name="toast_producto_anniadido_carrito">Product added to cart</string>
+    <string name="msg_pedido_sin_productos">The are no products in the order</string>
+    <string name="textTotal">"Total : "</string>
+    <string name="title_activity_confirmar_pedido">Confirm the order</string>
+    <string name="title_activity_resumen_pedido">Order summary</string>
 
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="rs_problema_en_pedido">The total is 0 or negative, modify the order</string>
+    <string name="btn_ok">OK</string>
+    <string name="err_pedido_nombre_vacio">Enter a customer name</string>
+    <string name="err_pedido_telefono_incorrecto">The phone must have 9 digits</string>
+    <string name="err_pedido_telefono_vacio">Enter the customer phone</string>
+    <string name="err_pedido_confirmacion">The order could not be confirmed</string>
+    <string name="pedido_confirmado">Order successful</string>
 
 
 
