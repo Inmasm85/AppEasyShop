@@ -10,7 +10,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppEasyShop">
         <activity
-            android:name=".ResumenPedidoActivity"
+            android:name=".activities.ConfirmarPedidoActivity"
+            android:label="@string/title_activity_confirmar_pedido"
+            android:theme="@style/Theme.AppEasyShop.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.ResumenPedidoActivity"
             android:label="@string/title_activity_resumen_pedido"
             android:theme="@style/Theme.AppEasyShop.NoActionBar">
             <intent-filter>
@@ -40,7 +50,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Producto"
+            android:name=".activities.Producto"
             android:label="@string/title_activity_producto"
             android:theme="@style/Theme.AppEasyShop.NoActionBar">
             <intent-filter>
@@ -50,7 +60,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".CategoriaActivity"
+            android:name=".activities.CategoriaActivity"
             android:label="@string/title_activity_categoria"
             android:theme="@style/Theme.AppEasyShop.NoActionBar">
             <intent-filter>
@@ -60,7 +70,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".activities.MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.AppEasyShop.NoActionBar">
             <intent-filter>

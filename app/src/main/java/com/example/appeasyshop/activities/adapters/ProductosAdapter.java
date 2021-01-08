@@ -1,4 +1,4 @@
-package com.example.appeasyshop;
+package com.example.appeasyshop.activities.adapters;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.example.appeasyshop.R;
 import com.example.appeasyshop.core.entities.Producto;
 import com.example.appeasyshop.core.entities.ProductoPorUnidad;
 

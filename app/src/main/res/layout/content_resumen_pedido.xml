@@ -10,7 +10,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.appeasyshop.ResumenPedidoActivity"
+    tools:context="com.example.appeasyshop.activities.ResumenPedidoActivity"
     tools:showIn="@layout/activity_resumen_pedido">
 
 
@@ -38,45 +38,77 @@
         android:textAlignment="center"
         android:textSize="18sp" />
 
-    <ListView
-        android:id="@+id/listViewCategorias"
-        android:layout_width="450dp"
-        android:layout_height="550dp"
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="343dp"
         android:layout_below="@+id/textPedido"
+        android:id="@+id/relLayoutListPedidos">
+
+        <TextView
+            android:id="@+id/emptyList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/msg_pedido_sin_productos"
+            android:textSize="25sp" />
+
+        <ListView
+            android:id="@+id/listViewCategorias"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="false"
+
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="33dp"
+
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="25dp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textTotalPedido"
+        android:layout_width="155dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relLayoutListPedidos"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginTop="30dp"
-
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="25dp" />
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:text="@string/textTotal"
+        android:textAlignment="textEnd"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/buttonSeguirComprando"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/listViewCategorias"
+        android:layout_width="120dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/relLayoutListPedidos"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="12dp"
         android:text="@string/seguirComprando" />
 
     <Button
         android:id="@+id/btnFinalizarPedido"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/listViewCategorias"
+        android:layout_height="76dp"
+        android:layout_below="@+id/relLayoutListPedidos"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="45dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="25dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="20dp"
         android:layout_toEndOf="@+id/buttonSeguirComprando"
-        android:text="@string/finalizarPedido" />
+        android:text="@string/finalizarPedido"
+        android:textSize="12dp" />
 
 
 </RelativeLayout>

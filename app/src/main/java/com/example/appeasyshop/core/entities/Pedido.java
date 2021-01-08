@@ -70,8 +70,12 @@ public class Pedido {
     }
 
     public double getTotal() {
-        return productos.stream()
-                .mapToDouble((l) -> l.getCantidad() * l.getProducto().getPrecio())
-                .sum();
+
+        if (productos.isEmpty())
+            return 0;
+        else
+            return productos.stream()
+                    .mapToDouble((l) -> l.getCantidad() * l.getProducto().getPrecio())
+                    .sum();
     }
 }

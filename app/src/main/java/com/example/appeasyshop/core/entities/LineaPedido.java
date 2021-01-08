@@ -40,4 +40,8 @@ public class LineaPedido {
     public int hashCode() {
         return Objects.hash(producto);
     }
+
+    public double total() {
+        return producto.getPrecio() * cantidad;
+    }
 }

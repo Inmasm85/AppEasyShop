@@ -1,4 +1,4 @@
-package com.example.appeasyshop;
+package com.example.appeasyshop.activities;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.appeasyshop.R;
 import com.example.appeasyshop.core.entities.Carrito;
 import com.example.appeasyshop.core.entities.ProductoPorCantidad;
 
@@ -92,6 +93,8 @@ public class Producto extends AppCompatActivity implements View.OnClickListener{
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_pedido) {
+            Intent intent = new Intent(this, ResumenPedidoActivity.class);
+            startActivity(intent);
             return true;
         }
 

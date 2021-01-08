@@ -1,8 +1,10 @@
-package com.example.appeasyshop;
+package com.example.appeasyshop.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.appeasyshop.activities.adapters.CategoriasAdapter;
+import com.example.appeasyshop.R;
 import com.example.appeasyshop.core.db.CategoriasDAO;
 import com.example.appeasyshop.core.entities.Categoria;
 
@@ -67,6 +69,8 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_pedido) {
+            Intent intent = new Intent(this, ResumenPedidoActivity.class);
+            startActivity(intent);
             return true;
         }
 

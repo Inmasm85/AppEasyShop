@@ -1,4 +1,4 @@
-package com.example.appeasyshop;
+package com.example.appeasyshop.activities.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;

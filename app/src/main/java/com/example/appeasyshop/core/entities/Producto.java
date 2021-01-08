@@ -31,7 +31,7 @@ public abstract class Producto implements Serializable {
         return descripcion;
     }
 
-    int getId() {
+    public int getId() {
         return id;
     }
 

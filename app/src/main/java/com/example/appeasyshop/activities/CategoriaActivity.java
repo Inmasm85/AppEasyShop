@@ -1,11 +1,12 @@
-package com.example.appeasyshop;
+package com.example.appeasyshop.activities;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 
-import com.example.appeasyshop.core.db.CategoriasDAO;
+import com.example.appeasyshop.activities.adapters.ProductosAdapter;
+import com.example.appeasyshop.R;
 import com.example.appeasyshop.core.db.ProductosDAO;
 import com.example.appeasyshop.core.entities.Categoria;
 import com.example.appeasyshop.core.entities.Producto;
@@ -89,6 +90,8 @@ public class CategoriaActivity extends AppCompatActivity implements SearchView.O
         int id = item.getItemId();
 
         if(id == R.id.action_pedido){
+            Intent intent = new Intent(this, ResumenPedidoActivity.class);
+            startActivity(intent);
             return true;
         }
 
@@ -140,8 +143,8 @@ public class CategoriaActivity extends AppCompatActivity implements SearchView.O
     public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
         Producto productoClicked = (Producto) adapterView.getItemAtPosition(i);
 
-        Intent intent = new Intent(this, com.example.appeasyshop.Producto.class);
-        intent.putExtra(com.example.appeasyshop.Producto.INTENT_EXTRA_PRODUCTO, productoClicked);
+        Intent intent = new Intent(this, com.example.appeasyshop.activities.Producto.class);
+        intent.putExtra(com.example.appeasyshop.activities.Producto.INTENT_EXTRA_PRODUCTO, productoClicked);
         startActivity(intent);
     }
 }

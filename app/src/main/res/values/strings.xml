@@ -25,6 +25,10 @@
     <string name="unidades">Unidades</string>
     <string name="comprar">Comprar</string>
     <string name="uno">1</string>
+    <string name="producto">Producto</string>
+    <string name="cantidad">Cantidad</string>
+    <string name="precioUnidad">Precio/ud</string>
+    <string name="totalProducto">Tot. Prod.</string>
 
     <!-- Recetas -->
     <string name="title_activity_recetas">Recetas</string>
@@ -38,11 +42,26 @@
     <string name="pedido">Pedido</string>
     <string name="seguirComprando">Seguir Comprando</string>
     <string name="finalizarPedido">Finalizar Pedido</string>
-    <string name="title_activity_resumen_pedido">Resumen del Pedido</string>
+    <string name="resumenPedido">Resumen del Pedido</string>
+    <string name="totalPedido">Total pedido : </string>
+    <string name="nombre">Nombre: </string>
+    <string name="telefono">Teléfono: </string>
+    <string name="confirmarPedido">Confirmar pedido</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="volver">Volver</string>
+
     <string name="rs_categoria_no_encontrada">No se han encontrado categorias</string>
     <string name="rs_productos_no_encontrados">No se encontraron productos</string>
     <string name="magnitud_cantidad">Cantidad</string>
     <string name="toast_producto_anniadido_carrito">Producto añadido al carrito</string>
+    <string name="msg_pedido_sin_productos">No hay productos en el pedido</string>
+    <string name="textTotal">"Total : "</string>
+    <string name="title_activity_confirmar_pedido">Confirmar Pedido</string>
+    <string name="title_activity_resumen_pedido">Resumen del Pedido</string>
+
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 
 
 </resources>
