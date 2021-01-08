@@ -74,9 +74,6 @@ public class MainActivity extends AppCompatActivity implements SearchView.OnQuer
             return true;
         }
 
-        if (id == R.id.action_recetas) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }

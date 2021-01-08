@@ -95,12 +95,10 @@ public class CategoriaActivity extends AppCompatActivity implements SearchView.O
             return true;
         }
 
-        if(id == R.id.action_recetas){
-            return true;
-        }
-
         if (id == R.id.action_categorias) {
-            finish();
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
             return true;
         }
 
@@ -126,7 +124,6 @@ public class CategoriaActivity extends AppCompatActivity implements SearchView.O
 
     @Override
     public boolean onQueryTextChange(String s) {
-
 
         // Si el texto es vacío, se vuelven a listar todas las categorías
         if (s.isEmpty()) {

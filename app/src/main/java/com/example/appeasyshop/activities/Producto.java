@@ -105,9 +105,6 @@ public class Producto extends AppCompatActivity implements View.OnClickListener{
             return true;
         }
 
-        if (id == R.id.action_recetas) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }

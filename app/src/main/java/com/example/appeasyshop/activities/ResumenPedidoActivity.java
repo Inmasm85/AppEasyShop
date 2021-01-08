@@ -77,12 +77,12 @@ public class ResumenPedidoActivity extends AppCompatActivity implements View.OnC
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_categorias) {
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
             return true;
         }
 
-        if (id == R.id.action_recetas) {
-            return true;
-        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -91,7 +91,9 @@ public class ResumenPedidoActivity extends AppCompatActivity implements View.OnC
     public void onClick(View view) {
 
         if (view.getId() == R.id.buttonSeguirComprando) {
-            finish();
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
         }
         else if (view.getId() == R.id.btnFinalizarPedido) {
 

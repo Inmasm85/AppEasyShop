@@ -71,13 +71,19 @@ public class ConfirmarPedidoActivity extends AppCompatActivity implements View.O
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_categorias) {
+        if (id == R.id.action_pedido) {
+            Intent intent = new Intent(this, ResumenPedidoActivity.class);
+            startActivity(intent);
             return true;
         }
 
-        if (id == R.id.action_recetas) {
+        if (id == R.id.action_categorias) {
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
             return true;
         }
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -85,9 +91,9 @@ public class ConfirmarPedidoActivity extends AppCompatActivity implements View.O
     @Override
     public void onClick(View view) {
 
-        if (view.getId() == R.id.botonVolver)
+        if (view.getId() == R.id.botonVolver) {
             finish();
-        else if (view.getId() == R.id.buttonAceptar) {
+        }else if (view.getId() == R.id.buttonAceptar) {
             String telefono = telefonoEditText.getText().toString();
             String nombre = nombreEditText.getText().toString();
 
